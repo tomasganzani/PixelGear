@@ -1,0 +1,16 @@
+[
+    {
+        "email": "tomi@gmail.com",
+        "password": "hola123",
+        "photo": null,
+        "role": 0,
+        "id": "ed3f54ad5f11d54175e5efcf"
+    },
+    {
+        "email": "tomi@gmail.com",
+        "password": "hola555",
+        "photo": null,
+        "role": "administrator",
+        "id": "98b9d0a5aefc68c8231cd1b6"
+    }
+]
