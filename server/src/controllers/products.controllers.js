@@ -85,6 +85,41 @@ async function deleteProduct(req, res, next) {
     }
 }
 
+async function showProducts(req, res, next) {
+    try {
+        let { category } = req.query;
+        let response;
+        if (!category) {
+            response = await productsManager.readAll();
+        } else {
+            response = await productsManager.readAll(category);
+        }
+        if (response.length > 0) {
+            return res.render("products", { products: response });
+        } else {
+            const error = new Error("NOT FOUND PRODUCTS");
+            error.statusCode = 404;
+            throw error;
+        }
+    } catch (error) {
+        return next(error);
+    }
+} 
+async function showOneProducts(req, res, next) {
+    try {
+        const { pid } = req.params;
+        const response = await productsManager.read(pid);
+        if (response) {
+            return res.render ("oneProduct", { product: response });
+        } else {
+            const error = new Error("NOT FOUND PRODUCT");
+            error.statusCode = 404;
+            throw error;
+        }
+    } catch (error) {
+        return next(error);
+    }
+}
 export {
     index,
     getAllProducts,
@@ -92,4 +127,6 @@ export {
     create,
     updateProduct,
     deleteProduct,
+    showProducts,
+    showOneProducts
 }
