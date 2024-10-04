@@ -76,11 +76,20 @@ async function updateUser(req, res, next) {
         return next(error);
     }
 }
-
+async function registerViews (req, res, next) {
+    const users = await userManager.readAll();
+    try {
+        return res.render("register", { users } )
+    } catch (error) {
+        console.log(error);
+        return next(error)
+    }
+};
 export {
     getAllUsers,
     getUser,
     create,
     deleteUser,
-    updateUser
+    updateUser,
+    registerViews
 }
