@@ -4,30 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/public/assets/img/favicon.png" type="Favicon Pixel Gear">
+    <link rel="stylesheet" href="/public/css/styles.css">
     <link rel="stylesheet" href="/public/css/styles.css">
     <title>Pixel Gear</title>
 </head>
 
 <body>
-    <header class="bg-black text-white flex justify-center">
-        <nav class="flex gap-4">
-            <div>
-                <a href="/products">Products</a>
+    <header class="flex justify-center text-white items-center flex-col">
+        <section class="bg-green-950 w-full">
+            <div class="text-white flex justify-center py-2">
+                <p>Shipping to all of Argentina.</p>
             </div>
-            <div class="logo">
-                <a href="/">logo</a>
-            </div>
-            <div class="inicioseccion">
-                <a href="/users/register">
-                    <span>Iniciar Sesion</span>
-                </a>
-            </div>
-        </nav>
+        </section>
+        <section class="w-full bg-[#52B788]">
+            <ul class="flex justify-around items-center">
+                <li>
+                    <img src="/public/assets/svg/search.svg" alt="Search svg">
+                </li>
+                <li>
+                    <a href="/">
+                        <img src="/public/assets/img/pixelgear.png" alt="Pixel Gear logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="/users/register" class="flex items-center gap-2">
+                        <img src="/public/assets/svg/user.svg" alt="User svg">
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
     </header>
     <main>
         {{{body}}}
     </main>
-    <footer></footer>
+    <footer class="flex justify-center items-center bg-[#52B788] text-white">
+        <section class="flex flex-col w-full max-w-[1200px]">
+            <article class="flex justify-between p-4">
+                <div class="flex flex-col items-center justify-center">
+                    <picture>
+                        <img src="/public/assets/img/pixelgear.png" alt="Logo pixelgear">
+                    </picture>
+                    <ul class="flex gap-2">
+                        <li>
+                            <a href="#">
+                                <img src="/public/assets/svg/instagram.svg" alt="Instagram Svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="/public/assets/svg/ticktock.svg" alt="Ticktock Svg">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="flex flex-col justify-start gap-2">
+                        <h2 class="font-bold text-xl">Our Keyboards</h2>
+                        <div class="flex flex-col">
+                            <a href="#">100% Keyboard</a>
+                            <a href="#">80% Keyboard</a>
+                            <a href="#">75% Keyboard</a>
+                            <a href="#">60% Keyboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col justify-start gap-2">
+                        <h2 class="text-xl font-bold">Legal Information</h2>
+                        <div class="flex flex-col">
+                            <a href="#">Shipping Policy</a>
+                            <a href="#">Return Policy</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex flex-col justify-start gap-2">
+                        <h2 class="text-xl font-bold">Contact</h2>
+                        <a href="#" class="flex items-center gap-2">
+                            <img src="/public/assets/svg/mail.svg" alt="Mail svg">
+                            <span>pixelgear@outlook.com</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-2">
+                            <img src="/public/assets/svg/phone.svg" alt="Phone svg">
+                            <span>123456789</span>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article class="flex items-center justify-center p-4  w-full">
+                <p class="text-sm font-bold">Copyright © 2022 Pixel Gear. All rights reserved.</p>
+            </article>
+        </section>
+    </footer>
     <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
     <script src="/public/js/socket.js"></script>
 </body>

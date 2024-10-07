@@ -1,0 +1,65 @@
+[
+    {
+        "email": "tomi@gmail.com",
+        "password": "hola123",
+        "photo": null,
+        "role": 0,
+        "id": "ed3f54ad5f11d54175e5efcf"
+    },
+    {
+        "email": "tomi@gmail.com",
+        "password": "hola555",
+        "photo": null,
+        "role": "administrator",
+        "id": "98b9d0a5aefc68c8231cd1b6"
+    },
+    {
+        "name": "tomi",
+        "email": "tomasg1223@outlook.com",
+        "password": "asdasd",
+        "photo": "hola.jpg",
+        "id": "2305de0f2492438a78e349f6"
+    },
+    {
+        "name": "asdad",
+        "email": "tomasg1223@outlook.com",
+        "password": "asdasd",
+        "photo": "asdads.jpg",
+        "id": "d6184c4956fed9295d8808a5"
+    },
+    {
+        "name": "tatat",
+        "email": "tomasg1223@outlook.com",
+        "password": "dsada",
+        "photo": "adsadsa.jpg",
+        "id": "097b631a492475887e1d4f2a"
+    },
+    {
+        "name": "asdasd",
+        "email": "tomasg1223@outlook.com",
+        "password": "asdasd",
+        "photo": "asdasd",
+        "id": "e9780c26080448aecaa369d2"
+    },
+    {
+        "name": "adsad",
+        "email": "tomasg1223@outlook.com",
+        "password": "asdasd",
+        "photo": "asdasd",
+        "id": "fd201f1092e8f3a93366fb34"
+    },
+    {
+        "name": "asdasd",
+        "email": "tomasg1223@outlook.com",
+        "password": "asdasd",
+        "photo": "adsad",
+        "id": "373ee995283061fc1247db9d"
+    },
+    {
+        "name": "asda",
+        "email": "tomasg1223@outlook.com",
+        "password": "asdasd",
+        "photo": "asdad",
+        "id": "043300420c6b08d1690aa6b1"
+    }
+]
