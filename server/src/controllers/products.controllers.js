@@ -95,7 +95,7 @@ async function showProducts(req, res, next) {
             response = await productsManager.readAll(category);
         }
         if (response.length > 0) {
-            return res.render("products", { products: response });
+            return response;
         } else {
             const error = new Error("NOT FOUND PRODUCTS");
             error.statusCode = 404;

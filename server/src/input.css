@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-imageindex {
+    background-image: url("/public/assets/img/fondoteclado.webp");
+}
