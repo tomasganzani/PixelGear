@@ -10,9 +10,13 @@ document.querySelector("#register").addEventListener("click", () => {
 })
 
 socket.on("register", (data) => {
-    data.map(
+    document.querySelector("#users").innerHTML = "";
+    
+    const users = data.slice(0, 10);
+
+    users.map(
         (user) => {
-            document.querySelector("#users").innerHTML += `<li>${user.name} - ${user.email}</li>`
+            document.querySelector("#users").innerHTML += `<p>${user.name} - ${user.email}</p>`
         }
     )
     
