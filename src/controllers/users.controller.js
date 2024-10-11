@@ -25,7 +25,7 @@ async function getUser(req, res, next) {
         const { pid } = req.params;
         const response = await userManager.read(pid);
         if (response) {
-            return res.status(200).json({ message: "USER FOND", response });
+            return res.render("user", { user: response });
         } else {
             const error = new Error("NOT FOUND USER");
             error.statusCode = 404;
@@ -85,11 +85,21 @@ async function registerViews (req, res, next) {
         return next(error)
     }
 };
+async function loginViews (req, res, next) {
+    const users = await userManager.readAll();
+    try {
+        return res.render("login", { users } )
+    } catch (error) {
+        console.log(error);
+        return next(error)
+    }
+};
 export {
     getAllUsers,
     getUser,
     create,
     deleteUser,
     updateUser,
-    registerViews
+    registerViews,
+    loginViews
 }
