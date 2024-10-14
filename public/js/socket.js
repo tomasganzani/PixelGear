@@ -7,7 +7,7 @@ document.querySelector("#register-form").addEventListener("submit", (event) => {
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
     const user = { name, email, password };
-    
+    7
     document.querySelector("#message").innerHTML = "Registering... Please wait.";
     socket.emit("register", user);
     
