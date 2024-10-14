@@ -1,23 +1,22 @@
 const socket = io();
 
-document.querySelector("#register").addEventListener("click", () => {
+document.querySelector("#register-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+
     const name = document.querySelector("#name").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#password").value;
-    const photo = document.querySelector("#photo").value;
-    const user = { name, email, password, photo };
+    const user = { name, email, password };
+    
+    document.querySelector("#message").innerHTML = "Registering... Please wait.";
     socket.emit("register", user);
-})
-
-socket.on("register", (data) => {
-    document.querySelector("#users").innerHTML = "";
     
-    const users = data.slice(0, 10);
+    socket.on("register", async () => {
+        document.querySelector("#message").innerHTML = "Registration successful!";
+        document.querySelector("#register-form").reset();
+    });
+    socket.on("error", (error) => {
+        document.querySelector("#message").innerHTML = `Error: ${error}`;
+    });
+});
 
-    users.map(
-        (user) => {
-            document.querySelector("#users").innerHTML += `<p>${user.name} - ${user.email}</p>`
-        }
-    )
-    
-})

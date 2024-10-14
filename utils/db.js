@@ -2,7 +2,7 @@ import { connect } from "mongoose";
 
 const connectDB = async () => {
     try {
-        const conn = await connect(process.env.LINK.MONGO);
+        const conn = await connect(process.env.LINK_MONGO);
         console.log(`MongoDB Connected: ${conn.connection.host}`);
     } catch (error) {
         console.log(error);

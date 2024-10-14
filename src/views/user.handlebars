@@ -2,7 +2,10 @@
     <div>
         <p>Buscando usuario...</p>
         {{#if user}}
-        <p>Usuario encontrado</p>
+        <h1>User Information</h1>
+        <p>ID: {{user.id}}</p>
+        <p>Name: {{user.name}}</p>
+        <p>Email: {{user.email}}</p>
         {{else}}
         <p>No se encontro el usuario</p>
         {{/if}}

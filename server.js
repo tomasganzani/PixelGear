@@ -14,27 +14,30 @@ import connectDB from "./utils/db.js";
 // Server config
 const server = express();
 const port = 8080;
-const ready = () => {
+const ready = async () => {
     console.log(`Server running on port ${port}`);
-    connectDB();
+    await connectDB();
 }
-    const httpServer = createServer(server);
+const httpServer = createServer(server);
 const tcpServer = new Server(httpServer);
 tcpServer.on("connection", socketCallBack)
-// Server on
 httpServer.listen(port, ready); 
-// Config
+
+server.use(cors())
+
+// Handlebars
 server.use(express.urlencoded({ extended: true }));
 server.use(express.json())
 server.use(morgan("dev"))
-server.use(cors())
 server.use("/public",express.static("public"));
-// Handlebars
+
+// templates config
 server.engine("handlebars", engine());
 server.set("view engine", "handlebars");
 server.set("views", __dirname + "/src/views");
-// functions
+
+
+// Routers
 server.use(router)
 server.use(errorHandler)
 server.use(pathHandler)
-// 1:04:09

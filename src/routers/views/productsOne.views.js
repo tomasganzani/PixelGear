@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { showOneProducts } from "../../controllers/products.controllers.js";
+import { showOneProduct } from "../../controllers/viewscontrollers/views.products.js";
 
 const productsViewRouter = Router();
 
-productsViewRouter.get("/:pid", showOneProducts)
+productsViewRouter.get("/:pid", showOneProduct)
 
 export default productsViewRouter

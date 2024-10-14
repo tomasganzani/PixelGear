@@ -9,22 +9,27 @@
     </article>
 </section>
 <section class="bg-[#D8F3DC] flex flex-col items-center gap-4 py-20 justify-center">
-    <div class="max-w-[1440px]">
+    <div class="max-w-[1440px] flex items-center gap-4 flex-col">
         <article class="text-5xl font-bold m-5">
             <h1>Available Products</h1>
         </article>
-        <article class="flex items-center justify-center gap-8 w-full h-[300px] rounded-3xl bg-[#B7E4C7]">
+        <article class="grilla">
             {{#each products}}
-            <div class="m-5 p-4">
-                <a href="/products/{{this.id}} ">
-                    {{#if this.title}}
-                    <h2>{{this.title}}</h2>
-                    {{else}}
-                    <h2>No title</h2>
-                    {{/if}}
-                    <p>{{this.price}}</p>
-                </a>
-            </div>
+            <a href="/products/{{this.id}}">
+                <div class="flex flex-col items-center justify-center gap-4 p-4 bg-[#52B788] rounded-3xl">
+                    <picture class="flex items-center justify-center">
+                        <img class="w-11/12 rounded-3xl" src="{{this.photo}}" alt="Photo Item">
+                    </picture>
+                    <div class="text-2xl text-white gap-2 flex items-center justify-center">
+                        {{#if this.title}}
+                        <h2>{{this.title}}</h2>
+                        {{else}}
+                        <h2>No title</h2>
+                        {{/if}}
+                        <p>${{this.price}}</p>
+                    </div>
+                </div>
+            </a>
             {{/each}}
         </article>
     </div>

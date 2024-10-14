@@ -575,6 +575,10 @@ video {
   height: 300px;
 }
 
+.h-\[40px\] {
+  height: 40px;
+}
+
 .h-\[500px\] {
   height: 500px;
 }
@@ -587,20 +591,20 @@ video {
   height: 100vh;
 }
 
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
-.h-\[1000px\] {
-  height: 1000px;
+.w-1\/2 {
+  width: 50%;
 }
 
 .w-10\/12 {
   width: 83.333333%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-\[300px\] {
+  width: 300px;
 }
 
 .w-\[500px\] {
@@ -611,16 +615,8 @@ video {
   width: 100%;
 }
 
-.w-\[300px\] {
-  width: 300px;
-}
-
 .w-screen {
   width: 100vw;
-}
-
-.w-1\/2 {
-  width: 50%;
 }
 
 .max-w-\[1200px\] {
@@ -629,6 +625,10 @@ video {
 
 .max-w-\[1440px\] {
   max-width: 1440px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .flex-row-reverse {
@@ -712,11 +712,6 @@ video {
   background-color: rgb(5 46 22 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#B7E4C7\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(183 228 199 / var(--tw-bg-opacity));
-}
-
 .p-4 {
   padding: 1rem;
 }
@@ -754,9 +749,19 @@ video {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-sm {
@@ -769,28 +774,18 @@ video {
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .font-bold {
   font-weight: 700;
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .text-\[\#B7E4C7\] {
   --tw-text-opacity: 1;
   color: rgb(183 228 199 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .filter {
@@ -799,4 +794,14 @@ video {
 
 .bg-imageindex {
   background-image: url("/public/assets/img/fondoteclado.webp");
+}
+
+.grilla {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 1rem;
 }
