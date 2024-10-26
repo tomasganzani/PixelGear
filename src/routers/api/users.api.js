@@ -4,9 +4,9 @@ import { readAll, read, create, update, destroy } from "../../controllers/apicon
 const usersApiRouter = Router();
 
 usersApiRouter.get("/", readAll);
-usersApiRouter.get("/:pid", read);
+usersApiRouter.get("/:cid", read);
 usersApiRouter.post("/", create);
-usersApiRouter.put("/:pid", update);
-usersApiRouter.delete("/:pid", destroy);
+usersApiRouter.put("/:cid", update);
+usersApiRouter.delete("/:cid", destroy);
 
 export default usersApiRouter

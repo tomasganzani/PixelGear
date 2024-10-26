@@ -7,10 +7,10 @@ import cartsViewRouter from "./carts.views.js";
 
 const viewsRouter = Router();
 
-viewsRouter.use("/products", adminViewRouter)
-viewsRouter.use("/products", productsViewRouter);
+viewsRouter.use("/admin", adminViewRouter)
 viewsRouter.use("/carts", cartsViewRouter);
 viewsRouter.use("/users", usersViewRouter);
+viewsRouter.use("/products", productsViewRouter);
 viewsRouter.use("/", mainViewRouter);   
 
 export default viewsRouter

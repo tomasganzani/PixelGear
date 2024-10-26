@@ -4,9 +4,9 @@ import { Router } from "express";
 const productsRouter = Router();
 
 productsRouter.get("/", readAll);
-productsRouter.get("/:pid", read);
+productsRouter.get("/:cid", read);
 productsRouter.post("/", create);
-productsRouter.put("/:pid", update);
-productsRouter.delete("/:pid", destroy);
+productsRouter.put("/:cid", update);
+productsRouter.delete("/:cid", destroy);
 
 export default productsRouter

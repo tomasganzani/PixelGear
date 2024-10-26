@@ -9,7 +9,7 @@ const schema = new Schema({
     },
     price: {
         type: Number,
-        required: false,
+        required: true,
         default: 1,
     },
     stock: {

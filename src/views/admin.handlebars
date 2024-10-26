@@ -1,10 +1,44 @@
-<section class="w-screen h-screen bg-[#D8F3DC] flex justify-center items-center gap-4">
-    <article>
-        <p>Create Element</p>
-        <input type="text">
-    </article>
-    <article>
-        <p>Id for element to delete o modify</p>
-        <input type="text" name="id" id="id" placeholder="Id for search...">
+<section class="bg-[#D8F3DC] flex justify-center items-center flex-col p-4 gap-4">
+    <div class="flex gap-4 pb-4">
+        <article class="flex flex-col items-center gap-4">
+            <p class="text-2xl font-bold">Add Product</p>
+            <form id="add-product-form" class="flex gap-4 flex-col" method="POST" action="/admin/add">
+                <input class="px-2 py-1 rounded-xl text-xl" type="text" name="title" id="title" placeholder="Title...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="number" name="price" id="price" placeholder="Price...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="number" name="stock" id="stock" placeholder="Stock...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="text" name="category" id="category"
+                    placeholder="Category...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="text" name="photo" id="photo" placeholder="Photo...">
+                <button class="px-4 py-1 text-white rounded-xl text-xl bg-[#081C15]" type="submit"
+                    id="create">Create</button>
+            </form>
+        </article>
+        <article class="flex flex-col items-center gap-4">
+            <p class="text-2xl font-bold">Update Product</p>
+            <form action="" class="flex gap-4 flex-col">
+                <input class="px-2 py-1 rounded-xl text-xl" type="title" name="title" id="title" placeholder="Title...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="price" name="price" id="price" placeholder="Price...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="stock" name="stock" id="stock" placeholder="Stock...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="category" name="category" id="category"
+                    placeholder="Category...">
+                <input class="px-2 py-1 rounded-xl text-xl" type="photo" name="photo" id="photo" placeholder="Photo...">
+                <button class="px-4 py-1 text-white rounded-xl text-xl bg-[#081C15]" type="update" name="update"
+                    id="update">Update</button>
+            </form>
+        </article>
+    </div>
+    <article class="flex flex-col gap-4 items-center justify-center">
+        <p class="text-2xl font-bold">Products</p>
+        {{#each products}}
+        <div class="flex gap-4 items-center justify-center">
+            <p class="py-4 px-2">{{this.title}}</p>
+            <p class="py-4 px-2">{{this.price}}</p>
+            <p class="py-4 px-2">{{this.stock}}</p>
+            <p class="py-4 px-2">{{this.category}}</p>
+            <img class="w-12" class="py-4 px-2" src="{{this.photo}}" alt="{{this.photo}}">
+            <button>Delete</button>
+            <button>Update</button>
+        </div>
+        {{/each}}
     </article>
 </section>
